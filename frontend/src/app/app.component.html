@@ -1,0 +1,45 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<mat-toolbar class="custom-toolbar">
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/">Home</button>
+    <button mat-menu-item routerLink="/create-post">Create Post</button>
+    <button mat-menu-item routerLink="/view-all">View Posts</button>
+    
+  </mat-menu>
+  <a routerLink="/" class="app-title">
+  <span>My Blog App</span>
+</a>
+
+  <span class="example-spacer"></span>
+
+  <button mat-raised-button class="primary" routerLink="/create-post" routerLinkActive="active">Create New Post</button>
+  <button mat-raised-button class="primary" routerLink="/view-all" routerLinkActive="active">View All Posts</button>
+  <button mat-raised-button class="primary" routerLink="/search-by-name" routerLinkActive="active" >search</button>
+  <button mat-icon-button class="example-icon favorite-icon" routerLink="/liked-posts" aria-label="View liked posts">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [matMenuTriggerFor]="shareMenu" aria-label="Share options">
+    <mat-icon>share</mat-icon>
+  </button>
+  <mat-menu #shareMenu="matMenu">
+    <button mat-menu-item (click)="share('mail')">Mail</button>
+    <button mat-menu-item (click)="share('whatsapp')">WhatsApp</button>
+    <button mat-menu-item (click)="share('facebook')">Facebook</button>
+  </mat-menu>
+</mat-toolbar>
+
+<div class="home-container">
+  <h1>Welcome to My App!</h1>
+  <!-- <p>Your one-stop solution for creating and managing posts.</p> -->
+  <button mat-raised-button color="primary" routerLink="/create-post">Get Started</button>
+
+
+</div>
+
+
+<router-outlet></router-outlet>

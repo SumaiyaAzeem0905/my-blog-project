@@ -1,0 +1,50 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+:host {
+  display: block;
+  background-image: url('https://st4.depositphotos.com/4867809/23880/i/450/depositphotos_238802708-stock-photo-blog-text-white-office-desk.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  color: white; /* Ensures text is visible on the background */
+  height: 100vh; /* Makes the background cover the full viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  text-align: center;
+  padding-top: 20vh; /* Pushes content down slightly */
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay for better text readability */
+  border-radius: 10px;
+  display: inline-block;
+  padding: 20px;
+}
+
+.custom-toolbar {
+  background-color: #cee1eb; /* Replace with your desired color */
+  color: white; /* Ensures text is visible on the toolbar */
+}
+
+.home-container {
+  position: absolute;
+  top: 67%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.app-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #000000; /* choose a color that matches your theme */
+  text-decoration: none; /* remove underline */
+  transition: color 0.3s ease;
+}
+
+.app-title:hover {
+  color: #38331c; /* a hover effect */
+}
